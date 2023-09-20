@@ -70,9 +70,9 @@ def index():
 
                 mydict = {"Product": searchString, "Name": name, "Rating": rating, "CommentHead": commentHead,
                           "Comment": custComment}
-                reviews.append(mydict)
-            logging.info("log my final result {}".format(reviews))
-            return render_template('result.html', reviews=reviews[0:(len(reviews)-1)])
+                review.append(mydict)
+            logging.info("log my final result {}".format(review))
+            return render_template('result.html', reviews=review[0:(len(reviews)-1)])
         except Exception as e:
             logging.info(e)
             return 'something is wrong'
